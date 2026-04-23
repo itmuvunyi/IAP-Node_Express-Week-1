@@ -1,7 +1,8 @@
 import express from "express";
 import authRoute from "./routes/authRoute.js";
 import cors from "cors";
-import signup from "./routes/signup.js";
+import mongoose from "mongoose";
+import userRoutes from "./routes/userRoutes.js";
 
 const app = express();
 const PORT = 3000;
@@ -9,9 +10,16 @@ const PORT = 3000;
 app.use(express.json());
 app.use(cors());
 
+// mongodb connection
+
+mongoose.connect("mongodb://localhost:27017/IAP")
+.then(()=> console.log("DB connected"))
+.catch(err => console.log(err));
+
+
 // routes
 app.use("/", authRoute);
-app.use("/", signup);
+app.use("/users", userRoutes);
 
 // serve frontend
 app.use(express.static("frontend"));

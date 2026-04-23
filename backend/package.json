@@ -1,8 +1,8 @@
 {
-  "name": "iap-node_express-week-1",
+  "name": "testing",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

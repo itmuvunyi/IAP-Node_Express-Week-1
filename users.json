@@ -2,8 +2,7 @@
     {
         "id": 1,
         "name":"Deborah",
-        "email":"deborah@example.com",
-        "password":"@123!"
+        "email":"deborah@example.com"
     },
     {
         "id":2,
